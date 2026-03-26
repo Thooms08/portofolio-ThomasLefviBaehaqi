@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THOMAS LEFVI BAEHAQI | Web Developer</title>
+    <title>Thomas Lefvi Baehaqi | Web Developer & Founder Flavory.id</title>
+    
+    <meta name="description" content="Portofolio Thomas Lefvi Baehaqi, Web Developer Passionate dan Founder Flavory.id. Spesialis Laravel, PHP, dan solusi digital bisnis inovatif.">
+    
+    <link rel="icon" type="image/jpeg" href="assets/foto_diri.jpg">
+    <link rel="apple-touch-icon" href="assets/foto_diri.jpg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thooms08.github.io/"> <meta property="og:title" content="Thomas Lefvi Baehaqi | Web Developer & Founder Flavory.id">
+    <meta property="og:description" content="Mahasiswa Sistem Informasi & Web Developer Full-Stack (Laravel, PHP). Membangun solusi digital inovatif dan efisien untuk bisnis. Lihat portofolio saya.">
+    <meta property="og:image" content="https://thooms08.github.io/assets/foto_diri.jpg"> <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thooms08.github.io/"> <meta name="twitter:title" content="Thomas Lefvi Baehaqi | Web Developer & Founder Flavory.id">
+    <meta name="twitter:description" content="Mahasiswa Sistem Informasi & Web Developer Full-Stack (Laravel, PHP). Membangun solusi digital inovatif dan efisien untuk bisnis.">
+    <meta name="twitter:image" content="https://thooms08.github.io/assets/foto_diri.jpg">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -22,12 +39,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates" data-i18n="nav_cert">Certificate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    </ul>
+                <button id="shareBtn" class="btn btn-outline-primary ms-lg-3 custom-btn btn-sm py-2 px-3">
+                    <i class="bi bi-share"></i><span class="d-lg-none">Share Portfolio</span>
+                </button>
+            </div>
             </div>
         </div>
     </nav>
@@ -38,10 +62,12 @@
                 <div class="col-lg-8">
                     <img src="assets/foto_diri.jpg" alt="Thomas Lefvi Baehaqi" class="hero-photo mb-4">
                     <h1 class="hero-title display-4 fw-bold mb-2 text-white">THOMAS LEFVI BAEHAQI</h1>
-                    <p class="hero-subtitle fs-4 mb-4">Web Developer &amp; Founder Flavory.id</p>
+                    <p class="hero-subtitle fs-4 mb-4" data-i18n="hero_subtitle">Web Developer &amp; Founder Flavory.id</p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="#about" class="btn btn-primary btn-lg px-4 custom-btn">Lihat Profil Saya</a>
-                        <a href="assets/cv-ThomasLefviBaehaqi.pdf" id="downloadCvBtn" class="btn btn-outline-info btn-lg px-4 custom-btn"><i class="bi bi-file-earmark-pdf"></i> Download CV</a>
+                        <a href="#about" class="btn btn-primary btn-lg px-4 custom-btn"><span data-i18n="btn_profile">Lihat Profil Saya</span></a>
+                        <a href="assets/cv-ThomasLefviBaehaqi.pdf" id="downloadCvBtn" class="btn btn-outline-info btn-lg px-4 custom-btn">
+                            <i class="bi bi-file-earmark-pdf"></i> <span data-i18n="btn_cv">Download CV</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -50,16 +76,13 @@
 
     <section id="about" class="section py-5">
         <div class="container">
-            <h2 class="section-title text-center mb-5">About Me</h2>
+            <h2 class="section-title text-center mb-5" data-i18n="about_title">About Me</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <p class="about-text lead text-center text-light opacity-75">
-                        Mahasiswa Fakultas Teknik &amp; Informatika, Universitas Bina Sarana Informatika, 
-                        Program Studi Sistem Informasi semester 4. Saya adalah Web Developer yang passionate 
-                        dalam membangun platform dan software bisnis yang inovatif. Sebagai Founder Flavory.id, 
-                        saya menggabungkan keahlian teknis di bidang HTML, CSS, JavaScript, PHP, MySQL, serta 
-                        framework Laravel untuk menciptakan solusi digital yang user-friendly dan efisien. 
-                        Terbiasa memanfaatkan AI-assisted tools untuk mengoptimasi proses pengembangan website.
+                    <p class="about-text lead text-light opacity-75" style="text-align: justify;" data-i18n="about_desc">
+                        Saya Mahasiswa Sistem Informasi Universitas Bina Sarana Informatika (Semester 4) sekaligus Web Developer yang berfokus pada penciptaan solusi digital bernilai bisnis. Sebagai Founder Flavory.id, saya menggabungkan keahlian full-stack (HTML, CSS, JavaScript, PHP, MySQL, dan Laravel) untuk membangun platform yang efisien, aman, dan mudah digunakan.
+                        <br><br>
+                        Pengalaman saya mencakup pengembangan ekosistem POS bisnis F&amp;B, platform e-commerce, sistem manajemen data terpadu, hingga integrasi perangkat lunak dengan hardware. Saya bekerja dengan pendekatan modern dan adaptif, memanfaatkan AI-assisted tools untuk memastikan setiap baris kode yang ditulis berkontribusi pada performa dan skalabilitas aplikasi yang tinggi.
                     </p>
                 </div>
             </div>
@@ -68,12 +91,16 @@
 
     <section class="section py-5 bg-darker">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Pendidikan</h2>
+            <h2 class="section-title text-center mb-5" data-i18n="edu_title">Pendidikan</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    <div class="edu-card text-center p-4 mb-4">
+                        <h4 class="text-white" data-i18n="tittle_edu_smk">SMK Plus Al-Azhar Mariuk</h4>
+                        <p class="text-primary mb-0" data-i18n="edu_smk">Otomatisasi Tata Kelola Perkantoran | 2021 - 2024</p>
+                    </div>
                     <div class="edu-card text-center p-4">
-                        <h4 class="text-white">Universitas Bina Sarana Informatika</h4>
-                        <p class="text-primary mb-0">Sistem Informasi • Semester 4</p>
+                        <h4 class="text-white" data-i18n="tittle_edu_major">Universitas Bina Sarana Informatika</h4>
+                        <p class="text-primary mb-0" data-i18n="edu_major">S1 Sistem Informasi | 2024 - Saat ini(Sedang berlangsung)</p>
                     </div>
                 </div>
             </div>
@@ -82,14 +109,14 @@
 
     <section id="projects" class="section py-5">
         <div class="container">
-            <h2 class="section-title text-center mb-5">My Projects</h2>
+            <h2 class="section-title text-center mb-5" data-i18n="proj_title">My Projects</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="project-card h-100 p-4">
                         <div class="card-body">
                             <h3 class="text-primary mb-3">Flavory.id</h3>
-                            <p class="text-light opacity-75">Platform POS/Kasir digital terintegrasi yang dirancang khusus untuk mengoptimalkan operasional bisnis kuliner (F&amp;B). Dilengkapi dengan fitur manajemen pesanan, Laporan Keuangan otomatis, dan Analisis Performa Bisnis secara real-time.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3">Lihat Detail</a>
+                            <p class="text-light opacity-75" data-i18n="proj_1_desc">Platform POS/Kasir digital terintegrasi yang dirancang khusus untuk mengoptimalkan operasional bisnis kuliner (F&amp;B). Dilengkapi dengan fitur manajemen pesanan, Laporan Keuangan otomatis, dan Analisis Performa Bisnis secara real-time.</p>
+                            <a href="https://flavory.id" class="btn btn-outline-primary mt-3"><span data-i18n="btn_detail">Kunjungi <i class="bi bi-arrow-left"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -97,8 +124,8 @@
                     <div class="project-card h-100 p-4">
                         <div class="card-body">
                             <h3 class="text-primary mb-3">Supermura.id</h3>
-                            <p class="text-light opacity-75">Platform fashion e-commerce modern dengan fitur lengkap, navigasi intuitif, dan pengalaman belanja terbaik untuk pengguna.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3">Lihat Detail</a>
+                            <p class="text-light opacity-75" data-i18n="proj_2_desc">Platform fashion e-commerce modern dengan fitur lengkap, navigasi intuitif, dan pengalaman belanja terbaik untuk pengguna.</p>
+                            <a href="https://supermura.id" class="btn btn-outline-primary mt-3"><span data-i18n="btn_detail">Kunjungi <i class="bi bi-arrow-left"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -108,8 +135,8 @@
 
     <section class="section py-5 bg-darker">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Soft Skills</h2>
-            <div class="row g-4 text-center">
+            <h2 class="section-title text-center mb-5" data-i18n="skill_title">Soft Skills</h2>
+            <div class="row g-4 justify-content-center text-center">
                 <div class="col-md-4">
                     <div class="skill-card p-4">
                         <i class="bi bi-lightbulb fs-1 mb-3 text-primary d-block"></i>
@@ -128,19 +155,26 @@
                         <h5 class="text-white">Teamwork</h5>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="skill-card p-4">
+                        <i class="bi bi-person-video fs-1 mb-3 text-primary d-block"></i>
+                        <h5 class="text-white">Public Speaking</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="certificates" class="section py-5">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Certificates</h2>
+            <h2 class="section-title text-center mb-5" data-i18n="cert_title">Certificates</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="cert-card h-100" data-bs-toggle="modal" data-bs-target="#certModal" data-img="assets/9unit.jpg" data-title="Workshop Bedah 9 Unit Pemrograman">
                         <img src="assets/9unit.jpg" alt="Workshop Bedah 9 Unit Pemrograman" class="cert-img">
                         <div class="p-4">
                             <h6 class="text-white mb-0">Workshop Bedah 9 Unit Pemrograman</h6>
+                            <small class="text-primary">Universitas Bina Sarana Informatika</small>
                         </div>
                     </div>
                 </div>
@@ -174,10 +208,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="" id="modalCertImg" class="img-fluid rounded" alt="Sertifikat">
-                </div>
-                <div class="modal-footer border-top-0 justify-content-center pb-4">
-                    <a href="#" id="modalDownloadBtn" class="btn btn-primary px-4 custom-btn"><i class="bi bi-download"></i> Download Sertifikat</a>
+                    <img src="" id="modalCertImg" class="img-fluid rounded" alt="Sertifikat" style="max-height: 70vh; object-fit: contain; width: auto;">
                 </div>
             </div>
         </div>
@@ -185,7 +216,7 @@
 
     <section class="section py-5 bg-darker">
         <div class="container">
-            <h2 class="section-title text-center mb-5">Favorite Tools</h2>
+            <h2 class="section-title text-center mb-5" data-i18n="tools_title">Favorite Tools</h2>
             <div class="row g-3 justify-content-center text-center">
                 <div class="col-6 col-md-4 col-lg-2"><div class="tool-badge"><i class="devicon-html5-plain"></i> HTML</div></div>
                 <div class="col-6 col-md-4 col-lg-2"><div class="tool-badge"><i class="devicon-css3-plain"></i> CSS</div></div>
@@ -208,52 +239,35 @@
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h4 class="mb-4 text-white">Hubungi Saya</h4>
+                    <h4 class="mb-4 text-white" data-i18n="contact_title">Hubungi Saya</h4>
                     <div class="d-flex flex-wrap justify-content-center gap-4">
                         <a href="https://github.com/Thooms08" target="_blank" class="contact-link">
-                            <i class="bi bi-github"></i> GitHub
+                            <i class="bi bi-github"></i> Thooms08
                         </a>
                         <a href="mailto:thomaslefvibaehaqi@gmail.com" class="contact-link">
                             <i class="bi bi-envelope"></i> thomaslefvibaehaqi@gmail.com
                         </a>
-                        <a href="#" class="contact-link">
-                            <i class="bi bi-whatsapp"></i> WhatsApp
+                        <a href="https://wa.me/6285178286438" target="_blank" class="contact-link">
+                            <i class="bi bi-whatsapp"></i> +62 851-7828-6438
+                        </a>
+                        <a href="https://www.instagram.com/thomas_lb08" target="_blank" class="contact-link">
+                            <i class="bi bi-instagram"></i> thomas_lb08
                         </a>
                     </div>
                     <p class="text-light opacity-50 mt-4 mb-0"><i class="bi bi-geo-alt-fill text-primary"></i> Karawang, Jawa Barat</p>
                 </div>
             </div>
-            <div class="text-center mt-5 text-light opacity-50 small">
+            <div class="text-center mt-5 text-light opacity-50 small" data-i18n="footer_rights">
                 © 2026 Thomas Lefvi Baehaqi. All Rights Reserved.
             </div>
         </div>
     </footer>
 
+    <button id="langToggle" class="lang-toggle-btn">
+        <i class="bi bi-translate"></i> <span id="langLabel">EN</span>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="anime.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const certModal = document.getElementById('certModal');
-            if (certModal) {
-                certModal.addEventListener('show.bs.modal', event => {
-                    // Tombol yang men-trigger modal
-                    const button = event.relatedTarget;
-                    // Ambil info dari atribut data-*
-                    const imgSrc = button.getAttribute('data-img');
-                    const certTitle = button.getAttribute('data-title');
-                    
-                    // Update konten modal
-                    const modalTitle = certModal.querySelector('.modal-title');
-                    const modalImg = certModal.querySelector('#modalCertImg');
-                    const modalDownloadBtn = certModal.querySelector('#modalDownloadBtn');
-                    
-                    modalTitle.textContent = certTitle;
-                    modalImg.src = imgSrc;
-                    modalDownloadBtn.href = imgSrc;
-                });
-            }
-        });
-    </script>
 </body>
 </html>
